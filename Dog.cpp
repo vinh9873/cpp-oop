@@ -24,7 +24,7 @@ public:
     }
 
     void makeSound() {
-        cout << "Woof Woof\n";
+        cout << "Woof Woof!\n";
     }
 
     void move() {
@@ -35,7 +35,7 @@ public:
         cout << "Eat bone!\n";
     }
 
-    void givesMilk() override {
+    void givesMilk() {
         cout << "Dog breastfeed!\n";
     }
 

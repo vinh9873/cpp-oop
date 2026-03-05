@@ -7,7 +7,7 @@ public:
         : Mammal(name, age, weight, hasFur) {}
 
     void makeSound() {
-        cout << "Meow Meow\n";
+        cout << "Meow Meow!\n";
     }
 
     void move() {

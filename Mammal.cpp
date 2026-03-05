@@ -8,10 +8,8 @@ protected:
     bool hasFur;
 
 public:
-    Mammal(string name, int age, float weight, bool hasFur) {
-        this->name = name;
-        this->age = age;
-        this->weight = weight;
+    Mammal(string name, int age, float weight, bool hasFur)
+    : Animal(name, age, weight) {
         this->hasFur = hasFur;
     }
 
