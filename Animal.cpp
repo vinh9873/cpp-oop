@@ -12,19 +12,14 @@ protected:
     float weight;
 
 public:
-    virtual void eat() {
-        cout << "Animal eats\n";
-    }
+
+    virtual void eat() = 0; //pure virtual
+    virtual void makeSound() = 0;
+    virtual void move() = 0;
+    //virtual void printInfo() = 0;
 
     void sleep() {
         cout << "Sleep at night\n";
-    }
-
-    virtual void makeSound() = 0;
-    virtual void move() = 0;
-
-    virtual void printInfo() {
-        cout << name << " " << age << " " << weight << endl;
     }
 };
 

@@ -13,4 +13,16 @@ public:
     void move() {
         cout << "Walk and jump\n";
     }
+
+    void eat(){
+        cout << "Eat Fish!\n";
+    }
+
+    // void printInfo(){
+    //     cout << name << endl;
+    // }
+
+    void givesMilk() override {
+        cout << "Cat breastfeed!\n";
+    }
 };

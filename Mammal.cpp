@@ -14,6 +14,10 @@ public:
         this->weight = weight;
         this->hasFur = hasFur;
     }
+
+    virtual void givesMilk() {
+        cout << "Mammal breastfeed!\n";
+    }
 };
 
 #endif
