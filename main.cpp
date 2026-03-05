@@ -2,6 +2,7 @@
 #include "Cat.cpp"
 #include "Duck.cpp"
 #include "Chicken.cpp"
+#include "Crocodile.cpp"
 
 int main() {
 
@@ -9,6 +10,7 @@ int main() {
     Cat cat("Tom", 3, 2.5, true);
     Duck duck("Quacker", 2, 2, 2.3, true, 5.6);
     Chicken chik("Olie", 2, 4, 2.3, false);
+    Crocodile cro("Croco", 15, 50.8, true, true, 2.5);
 
     dog.setBreed("Bull");
     dog.makeSound();
@@ -35,4 +37,8 @@ int main() {
     chik.fly();
     chik.layEgg();
     cout << endl;
+
+    cro.makeSound();
+    cro.eat();
+    cro.layEgg();
 }
