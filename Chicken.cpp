@@ -1,6 +1,7 @@
 #include "Bird.cpp"
+#include "IEggLayer.cpp"
 
-class Chicken : public Bird {
+class Chicken : public Bird, public IEggLayer {
 
     public:
         Chicken(string name, int age, float weight , 
@@ -20,6 +21,6 @@ class Chicken : public Bird {
         }
 
         void layEgg(){
-            cout << "Born Brown Eggs!\n";
+            cout << "Lay Brown Eggs!\n";
         }
 };

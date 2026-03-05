@@ -1,6 +1,8 @@
 #include "Bird.cpp"
+#include "IEggLayer.cpp"
+#include "ISwim.cpp"
 
-class Duck : public Bird {
+class Duck : public Bird, public IEggLayer, public ISwim {
     private:
         float swimSpeed;
 
@@ -38,6 +40,6 @@ class Duck : public Bird {
         }
 
         void layEgg(){
-            cout << "Born White Eggs!\n";
+            cout << "Lay White Eggs!\n";
         }
 };

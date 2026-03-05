@@ -20,10 +20,6 @@ class Bird : public Animal {
         void move(){
             cout << "Move by 2 legs!\n";
         }
-        
-        virtual void layEgg(){
-            cout << "Born Eggs!\n";
-        }
 };
 
 #endif

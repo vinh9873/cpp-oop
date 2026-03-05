@@ -1,6 +1,8 @@
 #include "Reptile.cpp"
+#include "IEggLayer.cpp"
+#include "ISwim.cpp"
 
-class Crocodile : public Reptile {
+class Crocodile : public Reptile, public IEggLayer, public ISwim {
     private:
         float length;
     
@@ -21,5 +23,17 @@ class Crocodile : public Reptile {
 
         void eat(){
             cout << "Eat meat!\n";
+        }
+
+        void move() {
+            cout << "Crawl on land using four legs!\n";
+        }
+
+        void layEgg(){
+            cout << "Lay Eggs on sand!\n";
+        }
+
+        void swim(){
+            cout << "Swim in the river!\n";
         }
 };
