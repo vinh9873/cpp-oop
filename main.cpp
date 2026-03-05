@@ -1,8 +1,8 @@
-#include "Dog.cpp"
-#include "Cat.cpp"
-#include "Duck.cpp"
-#include "Chicken.cpp"
-#include "Crocodile.cpp"
+#include "mammals/Dog.cpp"
+#include "mammals/Cat.cpp"
+#include "birds/Duck.cpp"
+#include "birds/Chicken.cpp"
+#include "reptile/Crocodile.cpp"
 
 int main() {
 

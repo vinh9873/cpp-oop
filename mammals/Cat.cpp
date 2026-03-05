@@ -1,4 +1,4 @@
-#include "Mammal.cpp"
+#include "../animals/Mammal.cpp"
 
 class Cat : public Mammal {
 public:

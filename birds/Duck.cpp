@@ -1,6 +1,6 @@
-#include "Bird.cpp"
-#include "IEggLayer.cpp"
-#include "ISwim.cpp"
+#include "../animals/Bird.cpp"
+#include "../Interfaces/IEggLayer.cpp"
+#include "../Interfaces/ISwim.cpp"
 
 class Duck : public Bird, public IEggLayer, public ISwim {
     private:

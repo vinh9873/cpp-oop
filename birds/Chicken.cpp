@@ -1,5 +1,5 @@
-#include "Bird.cpp"
-#include "IEggLayer.cpp"
+#include "../animals/Bird.cpp"
+#include "../Interfaces/IEggLayer.cpp"
 
 class Chicken : public Bird, public IEggLayer {
 
