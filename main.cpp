@@ -1,48 +1,51 @@
-#include "mammals/Dog.cpp"
-#include "mammals/Cat.cpp"
-#include "birds/Duck.cpp"
-#include "birds/Chicken.cpp"
-#include "reptile/Crocodile.cpp"
+#include "include/Dog.h"
+#include "include/Cat.h"
+#include "include/Duck.h"
+#include "include/Chicken.h"
+#include "include/Crocodile.h"
 
-int main() {
+int main()
+{
 
-    Dog dog("Spike", 2, 3.5, true, "Husky", true);
-    Cat cat("Tom", 3, 2.5, true);
-    Duck duck("Quacker", 2, 2, 2.3, true, 5.6);
-    Chicken chic("Olie", 2, 4, 2.3, false);
-    Crocodile cro("Croco", 15, 50.8, true, true, 2.5);
+    Animal *dog = new Dog("Spike", 10, 3.5, true, "Husky", true);
+    Animal *cat = new Cat("Tom", 8, 2.8, true, 2.7);
+    Animal *duck = new Duck("Donald", 8, 3, 2.1, 4.2);
+    Animal *chic = new Chicken("Olie", 4, 3, 2.1);
+    Animal *cro = new Crocodile("Croco", 30, 65.8, true, 2.8);
 
-    dog.setBreed("Bull");
-    dog.makeSound();
-    dog.eat();
-    dog.move();
-    dog.givesMilk();
+    dog->makeSound();
+    dog->eat();
+    dog->move();
+    ((Dog*)dog)->bark();
+    ((Dog*)dog)->givesMilk();
     cout << endl;
 
-    cat.makeSound();
-    cat.eat();
-    cat.move();
-    dog.givesMilk();
+    cat->makeSound();
+    cat->eat();
+    cat->move();
+    dynamic_cast<Cat*>(cat)->jump();
     cout << endl;
 
-    duck.makeSound();
-    duck.eat();
-    duck.fly();
-    duck.swim();
-    duck.layEgg();
-    duck.setSwimSpDuckeed(4.7);
-    cout << "Swim with " << duck.getSwimSpeed() << " km/h.\n";
+    duck->makeSound();
+    duck->eat();
+    duck->move();
+    dynamic_cast<Duck*>(duck)->fly();
+    dynamic_cast<Duck*>(duck)->eggLayer();
+    dynamic_cast<Duck*>(duck)->swim();
     cout << endl;
 
-    chic.makeSound();
-    chic.eat();
-    chic.fly();
-    chic.layEgg();
+    chic->makeSound();
+    chic->eat();
+    chic->move();
+    dynamic_cast<Chicken*>(chic)->fly();
+    ((Chicken*)chic)->crowDawn();
+    ((Chicken*)chic)->eggLayer();
     cout << endl;
 
-    cro.makeSound();
-    cro.eat();
-    cro.layEgg();
-    cro.move();
-    cro.swim();
+    cro->makeSound();
+    cro->eat();
+    cro->move();
+    ((Crocodile*)cro)->crawl();
+    ((Crocodile*)cro)->eggLayer();
+    ((Crocodile*)cro)->swim();
 }
